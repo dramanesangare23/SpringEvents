@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+	<context:annotation-config />
+	
+	<!-- Definition for helloWorld bean -->
+	<bean id="helloWorld" class="com.tutorialspoint.HelloWorld">
+		<property name="message" value="Welwome to the world of warlord!" />
+	</bean>
+
+	<!-- Definition for cStartEventHandler bean -->
+	<bean id="cStartEventHandler" class="com.tutorialspoint.CStartEventHandler" />
+	
+	<!-- Definition for cStopEventHandler bean -->
+	<bean id="cStopEventHandler" class="com.tutorialspoint.CStopEventHandler" />
+	
+</beans>
